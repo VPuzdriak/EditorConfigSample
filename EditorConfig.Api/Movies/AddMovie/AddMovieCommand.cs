@@ -8,7 +8,8 @@ public record AddMovieCommand(Movie Movie) : IRequest;
 
 public class AddMovieCommandHandler : IRequestHandler<AddMovieCommand>
 {
-    private readonly MoviesDbContext _context;
+    // Set severity for dotnet_style_readonly_field as error to see error on build
+    private MoviesDbContext _context;
 
     public AddMovieCommandHandler(MoviesDbContext context)
     {

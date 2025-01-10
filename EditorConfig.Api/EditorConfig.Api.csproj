@@ -4,13 +4,43 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <!--Enable all warnings shipped by CA and *IDE rules-->
+        <!--CA - code analysis aka code quality-->
+        <!--* IDE - code style. Enabled only in VS by default. Can be enabled for CLI as well-->
+        <AnalysisMode>All</AnalysisMode>
+        <!--Lock warnings to CA version. If new framework is used - new warnings won't appear-->
+        <!--Value "latest" will enforce the rules from the latest SDK installed on this machine-->
+        <!--Default value is taken from target framework-->
+        <AnalysisLevel>8.0</AnalysisLevel>
+        <!--Fail on build when CA or IDE error is met-->
+        <!--When true -> all rules specified in editorconfig will have severity error-->
+        <!--When false -> rules will have severity specified in editorconfig-->
+        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+        <!--Only for .NET Core 3-, .NET Standard, .NET Framework. Here it is left for demo-->
+        <!--For .NET 5+ enabled by default-->
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <!--IDE rules will be considered on CLI build as well-->
+        <!--* Some rules will still be available only in VS for performnce reasons. E.G. unreachable code-->
+        <!--* To enable IDE rules - optin via .editorconfig-->
+        <!--* Starting from .NET 9 or <AnalysisLevel>9.0</AnalysisLevel> we can use option format in .editorconfig-->
+        <!--* Alternative: specify default severity for whole category of rules, then optout from undesired rules-->
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MediatR" Version="12.4.1" />
-      <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.11" />
-      <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+        <PackageReference Include="MediatR" Version="12.4.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11"/>
+
+        <!--Only for Non SDK projects. Here it is left for demo-->
+        <!--Installing this package will take a rules from here if AnalisisLevel not specified-->
+        <!--If SDK installed on this machine > package version -> warning on build-->
+        <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.11"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0"/>
     </ItemGroup>
 
 </Project>
