@@ -9,9 +9,10 @@ public class GetMoviesEndpoint : IEndpoint
         builder.MapGet("/movies", async (MoviesDbContext context) =>
             {
                 var movies = await context.Movies.ToListAsync();
-                return Results.Ok(movies);
+                    return Results.Ok(movies);
             })
             .WithOpenApi()
+            .Produces<IEnumerable<Movie>>()
             .WithName("GetMovies")
             .WithTags("Movies");
     }

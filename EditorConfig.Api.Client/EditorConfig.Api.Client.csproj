@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
         <!--Enable all warnings shipped by CA and *IDE rules-->
         <!--CA - code analysis aka code quality-->
         <!--* IDE - code style. Enabled only in VS by default. Can be enabled for CLI as well-->
@@ -26,32 +26,5 @@
         <!--* Alternative: specify default severity for whole category of rules, then optout from undesired rules-->
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="MediatR" Version="12.4.1"/>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11"/>
-
-        <!--Only for Non SDK projects. Here it is left for demo-->
-        <!--Installing this package will take a rules from here if AnalisisLevel not specified-->
-        <!--If SDK installed on this machine > package version -> warning on build-->
-        <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.0.0">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-
-        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.11"/>
-
-        <PackageReference Include="NSwag.AspNetCore" Version="14.2.0"/>
-
-        <PackageReference Include="NSwag.MSBuild" Version="14.2.0">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
-
-    <Target Name="NSwag" BeforeTargets="AfterBuild">
-        <Message Text="Generating API Client"/>
-        <Exec Command="$(NSwagExe_Net80) run nswag.json /variables:Configuration=$(Configuration)"/>
-    </Target>
 
 </Project>
