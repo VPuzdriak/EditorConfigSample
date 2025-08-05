@@ -358,6 +358,4 @@ dotnet_diagnostic.CS1591.severity = none # Missing XML comment for publicly visi
 dotnet_diagnostic.SYSLIB1006.severity = none # Same Log Event Id in the same class
 
 # Explicitly opt-in.
-# If not-opt-in explicitly - then we have error in editor, but not on build
-dotnet_diagnostic.IDE0058.severity = none # Expression value is never used
-dotnet_diagnostic.IDE0044.severity = error # Require readonly where possible
+dotnet_diagnostic.CS8618.severity = error # Nullability of reference types in value of type is not compatible with target type
