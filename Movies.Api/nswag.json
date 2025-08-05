@@ -3,7 +3,7 @@
   "defaultVariables": null,
   "documentGenerator": {
     "aspNetCoreToOpenApi": {
-      "project": "EditorConfig.Api.csproj",
+      "project": "Movies.Api.csproj",
       "documentName": "v1",
       "msBuildProjectExtensionsPath": null,
       "configuration": "$(Configuration)",
@@ -46,8 +46,8 @@
       "propertySetterAccessModifier": "",
       "generateNativeRecords": false,
       "generateContractsOutput": true,
-      "contractsNamespace": "EditorConfig.Api.Client.Contracts",
-      "contractsOutputFilePath": "../EditorConfig.Api.Client/MoviesContracts.g.cs",
+      "contractsNamespace": "Movies.Api.Client.Contracts",
+      "contractsOutputFilePath": "../Movies.Api.Client/MoviesContracts.g.cs",
       "parameterDateTimeFormat": "s",
       "parameterDateFormat": "yyyy-MM-dd",
       "generateUpdateJsonSerializerSettingsMethod": true,
@@ -69,7 +69,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "EditorConfig.Api.Client",
+      "namespace": "Movies.Api.Client",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
@@ -103,7 +103,7 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../EditorConfig.Api.Client/MoviesClient.g.cs",
+      "output": "../Movies.Api.Client/MoviesClient.g.cs",
       "newLineBehavior": "Auto"
     }
   }

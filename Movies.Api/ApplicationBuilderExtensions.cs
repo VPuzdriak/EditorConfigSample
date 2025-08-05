@@ -1,6 +1,6 @@
 using System.Reflection;
 
-using EditorConfig.Api.Movies;
+using Movies.Api.Movies;
 
 namespace EditorConfig.Api;
 

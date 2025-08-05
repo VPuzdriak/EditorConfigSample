@@ -1,6 +1,8 @@
+using EditorConfig.Api;
+
 using Microsoft.EntityFrameworkCore;
 
-namespace EditorConfig.Api.Movies.GetMovies;
+namespace Movies.Api.Movies.GetMovies;
 
 public class GetMoviesEndpoint : IEndpoint {
   public void Map(IEndpointRouteBuilder builder) {

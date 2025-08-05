@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace EditorConfig.Api.Movies;
+namespace Movies.Api.Movies;
 
 public class MoviesDbContext : DbContext {
   public DbSet<Movie> Movies { get; set; }

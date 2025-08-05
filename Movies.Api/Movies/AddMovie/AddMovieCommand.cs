@@ -2,7 +2,7 @@ using MediatR;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace EditorConfig.Api.Movies.AddMovie;
+namespace Movies.Api.Movies.AddMovie;
 
 public record AddMovieCommand(Movie Movie) : IRequest;
 

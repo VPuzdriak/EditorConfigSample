@@ -1,4 +1,4 @@
-namespace EditorConfig.Api.Movies;
+namespace Movies.Api.Movies;
 
 public class Movie {
   public int Id { get; set; }

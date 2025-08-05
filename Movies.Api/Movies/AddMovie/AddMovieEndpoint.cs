@@ -1,6 +1,8 @@
+using EditorConfig.Api;
+
 using MediatR;
 
-namespace EditorConfig.Api.Movies.AddMovie;
+namespace Movies.Api.Movies.AddMovie;
 
 public class AddMovieEndpoint : IEndpoint {
   public void Map(IEndpointRouteBuilder builder) {

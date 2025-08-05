@@ -1,9 +1,10 @@
 using System.Reflection;
 
 using EditorConfig.Api;
-using EditorConfig.Api.Movies;
 
 using Microsoft.EntityFrameworkCore;
+
+using Movies.Api.Movies;
 
 var builder = WebApplication.CreateBuilder(args);
 

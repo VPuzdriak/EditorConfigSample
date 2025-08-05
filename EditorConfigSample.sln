@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorConfig.Api", "EditorConfig.Api\EditorConfig.Api.csproj", "{B5180C73-2A95-4E51-803B-EDE1BB634ECA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Api", "Movies.Api\Movies.Api.csproj", "{B5180C73-2A95-4E51-803B-EDE1BB634ECA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorConfig.Api.Client", "EditorConfig.Api.Client\EditorConfig.Api.Client.csproj", "{FD65198C-7173-4BCB-B823-420EA5E3BE08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Api.Client", "Movies.Api.Client\Movies.Api.Client.csproj", "{FD65198C-7173-4BCB-B823-420EA5E3BE08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
