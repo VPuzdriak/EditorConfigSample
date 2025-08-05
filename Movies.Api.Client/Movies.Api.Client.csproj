@@ -1,9 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <!--Enable all warnings shipped by CA and *IDE rules-->
         <!--CA - code analysis aka code quality-->
         <!--* IDE - code style. Enabled only in VS by default. Can be enabled for CLI as well-->
@@ -26,5 +24,9 @@
         <!--* Alternative: specify default severity for whole category of rules, then optout from undesired rules-->
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Text.Json" Version="8.0.6" />
+    </ItemGroup>
 
 </Project>
