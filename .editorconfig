@@ -361,3 +361,4 @@ dotnet_diagnostic.SYSLIB1006.severity = none # Same Log Event Id in the same cla
 dotnet_diagnostic.CS8618.severity = error # Nullability of reference types in value of type is not compatible with target type
 
 dotnet_diagnostic.CA2016.severity = error # Require forwarding the cancellation token to async methods
+dotnet_diagnostic.CS0162.severity = error # Remove unreachable code
